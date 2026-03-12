@@ -82,7 +82,7 @@ const Skills = () => {
             transition={{ duration: 0.5, type: "spring" }}
             className="inline-block mb-4"
           >
-            <span className="text-purple-500 text-sm font-mono tracking-wider">02. Expertise</span>
+            <span className="text-purple-500 text-sm font-mono tracking-wider">Expertise</span>
           </motion.div>
           <h2 className="text-6xl font-bold bg-gradient-to-r from-purple-200 via-purple-400 to-purple-200 bg-clip-text text-transparent mb-6">
             Technical Skills
