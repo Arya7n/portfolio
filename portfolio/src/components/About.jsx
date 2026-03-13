@@ -114,8 +114,8 @@ const About = () => {
                       whileHover={{ scale: 1.1 }}
                       className="p-4 rounded-xl bg-purple-900/20 border border-purple-500/20"
                     >
-                      <div className="text-4xl font-bold bg-gradient-to-r from-purple-300 to-purple-500 bg-clip-text text-transparent">23</div>
-                      <div className="text-sm text-purple-300 mt-1">Years Old</div>
+                      <div className="text-4xl font-bold bg-gradient-to-r from-purple-300 to-purple-500 bg-clip-text text-transparent">3+</div>
+                      <div className="text-sm text-purple-300 mt-1">live projects</div>
                     </motion.div>
                   </div>
                 </div>
