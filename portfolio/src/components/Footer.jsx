@@ -59,7 +59,7 @@ const Footer = () => {
               &lt;Aryan /&gt;
             </h3>
             <p className="text-purple-300 text-sm leading-relaxed">
-              Full Stack MERN Developer passionate about building scalable backend systems and modern web applications.
+              Full Stack Developer passionate about building scalable backend systems and modern web applications.
             </p>
           </motion.div>
 

@@ -164,7 +164,7 @@ const Hero = () => {
                 transition={{ duration: 2, repeat: Infinity }}
                 className="inline-block w-2 h-2 bg-purple-400 rounded-full mr-2"
               />
-              Full Stack MERN Developer
+              Full Stack  Developer
             </motion.span>
           </motion.div>
 

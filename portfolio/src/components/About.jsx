@@ -92,7 +92,7 @@ const About = () => {
               
               <div className="relative">
                 <p className="text-lg text-purple-100 leading-relaxed mb-6">
-                  I'm a <span className="text-purple-300 font-semibold">Full Stack MERN Developer</span> with professional experience building dynamic and responsive web applications. I specialize in modern JavaScript technologies including Next.js, React, Node.js, and MongoDB.
+                  I'm a <span className="text-purple-300 font-semibold">Full Stack  Developer</span> with professional experience building dynamic and responsive web applications. I specialize in modern JavaScript technologies including Next.js, React, Node.js, and MongoDB.
                 </p>
                 <p className="text-lg text-purple-100 leading-relaxed mb-6">
                   I focus on writing clean, maintainable code and developing <span className="text-purple-300 font-semibold">scalable backend architectures</span> that support seamless user experiences. I enjoy solving complex technical problems and contributing to high-impact projects that align with business goals.
