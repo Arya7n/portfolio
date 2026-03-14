@@ -200,7 +200,7 @@ const About = () => {
                     </div>
                   </div>
                   <p className="text-purple-100 leading-relaxed">
-                    Currently working as a MERN Stack Developer, focusing on building scalable web applications using MongoDB, Express.js, React.js, and Node.js.
+                    Currently working as a MERN Stack Developer, focusing on building scalable web applications using MongoDB, Express.js, React.js, Node.js and more.
                   </p>
                 </motion.div>
 
