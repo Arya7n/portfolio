@@ -107,7 +107,7 @@ const About = () => {
                       whileHover={{ scale: 1.1 }}
                       className="p-4 rounded-xl bg-purple-900/20 border border-purple-500/20"
                     >
-                      <div className="text-4xl font-bold bg-gradient-to-r from-purple-300 to-purple-500 bg-clip-text text-transparent">8+</div>
+                      <div className="text-4xl font-bold bg-gradient-to-r from-purple-300 to-purple-500 bg-clip-text text-transparent">9+</div>
                       <div className="text-sm text-purple-300 mt-1">Months Experience</div>
                     </motion.div>
                     <motion.div
@@ -166,6 +166,66 @@ const About = () => {
             ))}
           </motion.div>
         </div>
+
+        {/* Experience Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-20"
+        >
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="bg-purple-950/20 backdrop-blur-sm border-2 border-purple-500/20 rounded-3xl p-10 relative overflow-hidden group max-w-4xl mx-auto"
+          >
+            {/* Hover glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-600/0 via-purple-600/10 to-purple-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            
+            <div className="relative">
+              <h3 className="text-3xl font-bold text-purple-100 mb-8 text-center">Professional Experience</h3>
+              
+              <div className="space-y-8">
+                {/* Current Position */}
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  className="bg-purple-900/10 border border-purple-500/20 rounded-2xl p-6"
+                >
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                    <div>
+                      <h4 className="text-xl font-semibold text-purple-200">MERN Stack Developer</h4>
+                      <p className="text-purple-300">Psquare Company</p>
+                    </div>
+                    <div className="text-purple-400 font-mono text-sm mt-2 md:mt-0">
+                      Dec 2025 - Present
+                    </div>
+                  </div>
+                  <p className="text-purple-100 leading-relaxed">
+                    Currently working as a MERN Stack Developer, focusing on building scalable web applications using MongoDB, Express.js, React.js, and Node.js.
+                  </p>
+                </motion.div>
+
+                {/* Previous Position */}
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  className="bg-purple-900/10 border border-purple-500/20 rounded-2xl p-6"
+                >
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                    <div>
+                      <h4 className="text-xl font-semibold text-purple-200">MERN Stack Developer</h4>
+                      <p className="text-purple-300">NetscapeLabs Infotech Pvt Ltd</p>
+                    </div>
+                    <div className="text-purple-400 font-mono text-sm mt-2 md:mt-0">
+                      Jul 2025 - Dec 2025
+                    </div>
+                  </div>
+                  <p className="text-purple-100 leading-relaxed">
+                    Developed full-stack web applications using the MERN stack, contributing to multiple projects and gaining expertise in modern web development practices.
+                  </p>
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
