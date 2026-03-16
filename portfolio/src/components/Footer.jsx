@@ -49,7 +49,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6 py-16 relative z-10">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
-          <motion.div
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -61,7 +61,7 @@ const Footer = () => {
             <p className="text-purple-300 text-sm leading-relaxed">
               Full Stack Developer passionate about building scalable backend systems and modern web applications.
             </p>
-          </motion.div>
+          </motion.div> 
 
           {/* Quick Links */}
           <motion.div
@@ -71,7 +71,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <h4 className="text-purple-200 font-bold text-lg mb-6">Quick Links</h4>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3"> 
               {quickLinks.map((link, index) => (
                 <motion.button
                   key={link.id}
@@ -82,7 +82,7 @@ const Footer = () => {
                   <span className="text-purple-500">→</span> {link.label}
                 </motion.button>
               ))}
-            </div>
+            </div> 
           </motion.div>
 
           {/* Social Links */}

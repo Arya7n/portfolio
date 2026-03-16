@@ -21,7 +21,7 @@ const Projects = () => {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-800/10 rounded-full blur-3xl" />
       </div>
 
-      {/* Animated grid */}
+      {/* Animated grid */} 
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0"
           style={{
@@ -32,7 +32,7 @@ const Projects = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10" ref={ref}>
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -42,7 +42,7 @@ const Projects = () => {
             initial={{ scale: 0 }}
             animate={inView ? { scale: 1 } : {}}
             transition={{ duration: 0.5, type: "spring" }}
-            className="inline-block mb-4"
+            className="inline-block mb-4"  
           >
             <span className="text-purple-500 text-sm font-mono tracking-wider">Portfolio</span>
           </motion.div>
