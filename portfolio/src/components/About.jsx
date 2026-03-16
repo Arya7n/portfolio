@@ -8,7 +8,7 @@ const About = () => {
     threshold: 0.3,
     triggerOnce: true,
   });
-
+ 
   const features = [
     {
       icon: <Code2 size={28} />,
@@ -39,7 +39,7 @@ const About = () => {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-900/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-800/10 rounded-full blur-3xl" />
       </div>
-
+ 
       {/* Animated grid */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0"

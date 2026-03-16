@@ -11,26 +11,26 @@ const Footer = () => {
       href: "https://github.com/Arya7n",
       label: "GitHub"
     },
-    {
+    { 
       icon: <Linkedin size={22} />,
       href: "https://www.linkedin.com/in/aryan-46191b265",
       label: "LinkedIn"
     },
     {
-      icon: <Mail size={22} />,
+      icon: <Mail size={22} />, 
       href: "mailto:aryan11jr@gmail.com",
       label: "Email"
     }
   ];
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId) => {  
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  const scrollToTop = () => {
+  const scrollToTop = () => { 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
