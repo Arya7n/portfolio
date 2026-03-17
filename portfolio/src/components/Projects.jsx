@@ -39,20 +39,25 @@ const Projects = () => {
           className="text-center mb-20"
         >
           <motion.div
-            initial={{ scale: 0 }}
-            animate={inView ? { scale: 1 } : {}}
-            transition={{ duration: 0.5, type: "spring" }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.4, type: "spring" }}
             className="inline-block mb-4"  
           >
             <span className="text-purple-500 text-sm font-mono tracking-wider">Portfolio</span>
           </motion.div>
-          <h2 className="text-6xl font-bold bg-gradient-to-r from-purple-200 via-purple-400 to-purple-200 bg-clip-text text-transparent mb-6">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-6xl font-bold bg-gradient-to-r from-purple-200 via-purple-400 to-purple-200 bg-clip-text text-transparent mb-6"
+          >
             Featured Projects
-          </h2>
+          </motion.h2>
           <motion.p 
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.2 }}
             className="text-purple-300 text-xl mb-8"
           >
             A selection of my recent work  
@@ -61,7 +66,7 @@ const Projects = () => {
             className="w-32 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto"
             initial={{ width: 0 }}
             animate={inView ? { width: 128 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           />  
         </motion.div>
 
@@ -69,8 +74,8 @@ const Projects = () => {
           {mockProjects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50, rotateX: -10 }}
-              animate={inView ? { opacity: 1, y: 0, rotateX: 0 } : {}}
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ 
                 duration: 0.6, 
                 delay: index * 0.1,
@@ -79,8 +84,7 @@ const Projects = () => {
               }}
               whileHover={{ 
                 y: -15,
-                scale: 1.02,
-                rotateY: hoveredIndex === index ? 5 : 0
+                scale: 1.02
               }}
               onHoverStart={() => setHoveredIndex(index)}
               onHoverEnd={() => setHoveredIndex(null)}   

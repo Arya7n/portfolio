@@ -88,20 +88,50 @@ const Header = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -2 }}
+                whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
-                className={`relative px-6 py-2.5 rounded-full font-medium transition-all duration-300 ${
+                className={`relative px-6 py-2.5 rounded-full font-medium transition-all duration-300 border-2 overflow-hidden group ${
                   activeSection === item.id
-                    ? 'text-white bg-purple-600/30 border-2 border-purple-500/50'
-                    : 'text-purple-300 hover:text-white hover:bg-purple-950/30'
+                    ? 'text-white bg-purple-600/30 border-purple-500/50'
+                    : 'text-purple-300 hover:text-white hover:bg-purple-950/30 border-transparent'
                 }`}
               >
+                {/* Shimmering background on hover */}
+                <motion.div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  animate={activeSection === item.id ? { opacity: 0.5 } : {}}
+                >
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent"
+                    animate={activeSection === item.id ? { x: ['0%', '100%'] } : {}}
+                    transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                  />
+                </motion.div>
+
                 <span className="relative z-10">{item.label}</span>
+
+                {/* Active underline animation */}
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeSection"
-                    className="absolute inset-0 bg-purple-600/20 rounded-full"
+                    className="absolute inset-0 bg-purple-600/20 rounded-full -z-10"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+
+                {/* Glow pulse for active state */}
+                {activeSection === item.id && (
+                  <motion.div
+                    className="absolute inset-0 rounded-full border-2 border-purple-400/0"
+                    animate={{
+                      borderColor: ['rgba(167, 139, 250, 0)', 'rgba(167, 139, 250, 0.5)', 'rgba(167, 139, 250, 0)'],
+                      boxShadow: [
+                        '0 0 0 0px rgba(147, 51, 234, 0)',
+                        '0 0 15px 5px rgba(147, 51, 234, 0.3)',
+                        '0 0 0 0px rgba(147, 51, 234, 0)'
+                      ]
+                    }}
+                    transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                   />
                 )}
               </motion.button>
@@ -137,10 +167,10 @@ const Header = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`text-left px-6 py-3 rounded-xl font-medium transition-all ${
+                    className={`text-left px-6 py-3 rounded-xl font-medium transition-all border-2 ${
                       activeSection === item.id
-                        ? 'text-white bg-purple-600/30 border-2 border-purple-500/50'
-                        : 'text-purple-300 hover:text-white hover:bg-purple-950/30'
+                        ? 'text-white bg-purple-600/30 border-purple-500/50'
+                        : 'text-purple-300 hover:text-white hover:bg-purple-950/30 border-transparent'
                     }`}
                   >
                     {item.label}

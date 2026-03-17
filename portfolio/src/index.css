@@ -17,10 +17,10 @@ body {
   background-color: #000000;
   overflow-x: hidden;
 }
-
+  
 /* Custom scrollbar with purple theme */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 0px;
 }
 
 ::-webkit-scrollbar-track {
