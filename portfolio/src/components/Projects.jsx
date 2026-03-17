@@ -55,14 +55,14 @@ const Projects = () => {
             transition={{ delay: 0.3 }}
             className="text-purple-300 text-xl mb-8"
           >
-            A selection of my recent work
+            A selection of my recent work  
           </motion.p>
           <motion.div 
             className="w-32 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto"
             initial={{ width: 0 }}
             animate={inView ? { width: 128 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-          />
+          />  
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -83,7 +83,7 @@ const Projects = () => {
                 rotateY: hoveredIndex === index ? 5 : 0
               }}
               onHoverStart={() => setHoveredIndex(index)}
-              onHoverEnd={() => setHoveredIndex(null)}
+              onHoverEnd={() => setHoveredIndex(null)}   
               className="group bg-gradient-to-br from-purple-950/40 to-black backdrop-blur-sm border-2 border-purple-500/30 rounded-3xl overflow-hidden hover:border-purple-400/60 transition-all duration-500 relative"
             >
               {/* Glowing effect on hover */}
