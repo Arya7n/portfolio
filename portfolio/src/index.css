@@ -61,3 +61,29 @@ body {
   margin: 0 auto;
 }
 
+/* Interactive cursor glow effect */
+@keyframes cursor-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.5), 0 0 40px rgba(147, 51, 234, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(147, 51, 234, 0.7), 0 0 60px rgba(147, 51, 234, 0.4);
+  }
+}
+
+/* Smooth button transitions */
+button {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shimmer effect for interactive elements */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+

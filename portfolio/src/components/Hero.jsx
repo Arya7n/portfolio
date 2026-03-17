@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, ChevronDown, Code2, Terminal, Sparkles } from 'lucide-react';
-import { Button } from './ui/button';
 import Typewriter from 'typewriter-effect';
 
 const Hero = () => {
@@ -213,31 +212,33 @@ const Hero = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-14"
           >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
+            <motion.button
+              whileHover={{ scale: 1.05, y: -3 }}
               whileTap={{ scale: 0.95 }}
+              onClick={scrollToSkills}
+              className="relative px-10 py-6 text-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 rounded-full border-0 shadow-[0_0_20px_rgba(168,85,247,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] transition-all duration-300 overflow-hidden group"
             >
-              <Button
-                onClick={scrollToSkills}
-                size="lg"
-                className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white font-semibold px-10 py-6 text-lg shadow-[0_0_20px_rgba(168,85,247,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] transition-all duration-300 border-0"
-              >
-                View Skills
-              </Button>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
+              <span className="relative z-10">View Skills</span>
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20"
+                animate={{ x: ['0%', '100%'] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              />
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.05, y: -3 }}
               whileTap={{ scale: 0.95 }}
+              onClick={scrollToContact}
+              className="relative px-10 py-6 text-lg font-semibold text-purple-200 border-2 border-purple-500/50 hover:border-purple-400 bg-transparent hover:bg-purple-950/50 rounded-full backdrop-blur-sm transition-all duration-300 overflow-hidden group"
             >
-              <Button
-                onClick={scrollToContact}
-                size="lg"
-                variant="outline"
-                className="border-2 border-purple-500/50 text-purple-200 hover:bg-purple-950/50 hover:border-purple-400 font-semibold px-10 py-6 text-lg backdrop-blur-sm transition-all duration-300"
-              >
-                Contact Me
-              </Button>
-            </motion.div>
+              <span className="relative z-10">Contact Me</span>
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-400 to-transparent opacity-0 group-hover:opacity-10"
+                animate={{ x: ['0%', '100%'] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              />
+            </motion.button>
           </motion.div>
 
           {/* Social Links with enhanced hover */}
@@ -251,23 +252,43 @@ const Hero = () => {
               href="https://github.com/Arya7n"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.3, rotate: 360 }}
+              whileHover={{ scale: 1.3 }}
               whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="text-purple-400 hover:text-purple-300 transition-colors p-3 rounded-full hover:bg-purple-950/30"
+              className="text-purple-400 hover:text-purple-300 transition-colors p-3 rounded-full hover:bg-purple-950/30 relative group"
             >
               <Github size={32} />
+              <motion.div
+                className="absolute inset-0 rounded-full border-2 border-purple-400/0 group-hover:border-purple-400/50"
+                animate={{
+                  boxShadow: [
+                    '0 0 0 0px rgba(168, 85, 247, 0)',
+                    '0 0 0 10px rgba(168, 85, 247, 0.3)',
+                    '0 0 0 0px rgba(168, 85, 247, 0)'
+                  ]
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
             </motion.a>
             <motion.a
               href="https://www.linkedin.com/in/aryan-46191b265"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.3, rotate: -360 }}
+              whileHover={{ scale: 1.3 }}
               whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="text-purple-400 hover:text-purple-300 transition-colors p-3 rounded-full hover:bg-purple-950/30"
+              className="text-purple-400 hover:text-purple-300 transition-colors p-3 rounded-full hover:bg-purple-950/30 relative group"
             >
               <Linkedin size={32} />
+              <motion.div
+                className="absolute inset-0 rounded-full border-2 border-purple-400/0 group-hover:border-purple-400/50"
+                animate={{
+                  boxShadow: [
+                    '0 0 0 0px rgba(168, 85, 247, 0)',
+                    '0 0 0 10px rgba(168, 85, 247, 0.3)',
+                    '0 0 0 0px rgba(168, 85, 247, 0)'
+                  ]
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
             </motion.a>
           </motion.div>
         </motion.div>
