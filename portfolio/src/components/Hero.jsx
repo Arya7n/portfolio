@@ -276,7 +276,7 @@ const Hero = () => {
               whileHover={{ scale: 1.3 }}
               whileTap={{ scale: 0.9 }}
               className="text-purple-400 hover:text-purple-300 transition-colors p-3 rounded-full hover:bg-purple-950/30 relative group"
-            >
+            > 
               <Linkedin size={32} />
               <motion.div
                 className="absolute inset-0 rounded-full border-2 border-purple-400/0 group-hover:border-purple-400/50"

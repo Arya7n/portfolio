@@ -8,7 +8,7 @@ const Contact = () => {
   const [ref, inView] = useInView({
     threshold: 0.3,
     triggerOnce: true,
-  });
+  });  
 
   const [isHovered, setIsHovered] = useState(null);
 

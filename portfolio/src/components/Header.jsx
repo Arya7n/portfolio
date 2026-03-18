@@ -139,7 +139,7 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <motion.button
+          <motion.button  
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             whileTap={{ scale: 0.9 }}
             className="md:hidden text-purple-300 hover:text-white transition-colors p-2 rounded-lg hover:bg-purple-950/30"
