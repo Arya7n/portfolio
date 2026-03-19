@@ -80,7 +80,7 @@ const Projects = () => {
                 duration: 0.6, 
                 delay: index * 0.1,
                 type: "spring",
-                stiffness: 100
+                stiffness: 100      
               }}
               whileHover={{ 
                 y: -15,
