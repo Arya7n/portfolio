@@ -41,7 +41,7 @@ const Projects = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.4, type: "spring" }}
+            transition={{ duration: 0.4, type: "spring" }}    
             className="inline-block mb-4"  
           >
             <span className="text-purple-500 text-sm font-mono tracking-wider">Portfolio</span>

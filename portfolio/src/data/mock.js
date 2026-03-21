@@ -31,7 +31,7 @@ export const mockProjects = [
     githubUrl: "https://github.com/Arya7n",
 
   },
-  {
+  {     
     title: "Portfolio Generator",
     description: "Dynamic portfolio generator that creates beautiful portfolios from JSON configuration.",
     techStack: ["React", "TypeScript", "Tailwind", "Vite"],
