@@ -79,7 +79,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="w-32 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto"
           />
-        </motion.div>
+        </motion.div>   
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Left side - Description */}

@@ -38,7 +38,7 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <motion.div
+          <motion.div    
             initial={{ opacity: 0, scale: 0.8 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.4, type: "spring" }}    
@@ -47,12 +47,12 @@ const Projects = () => {
             <span className="text-purple-500 text-sm font-mono tracking-wider">Portfolio</span>
           </motion.div>
           <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}   
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-6xl font-bold bg-gradient-to-r from-purple-200 via-purple-400 to-purple-200 bg-clip-text text-transparent mb-6"
           >
-            Featured Projects
+            Featured Projects     
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0 }}
