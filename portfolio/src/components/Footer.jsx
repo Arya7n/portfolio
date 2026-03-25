@@ -48,7 +48,7 @@ const Footer = () => {
       
       <div className="max-w-6xl mx-auto px-6 py-16 relative z-10">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
-          {/* Brand */}
+          {/* Brand */}     
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
