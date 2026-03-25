@@ -91,7 +91,7 @@ const About = () => {
             <div className="bg-purple-950/20 backdrop-blur-sm border-2 border-purple-500/20 rounded-3xl p-10 relative overflow-hidden group hover:scale-[1.01] transition-transform duration-300">
               {/* Hover glow effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600/0 via-purple-600/10 to-purple-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+                    
               <div className="relative">    
                 <p className="text-lg text-purple-100 leading-relaxed mb-6">
                   I'm a <span className="text-purple-300 font-semibold">Full Stack  Developer</span> with professional experience building dynamic and responsive web applications. I specialize in modern JavaScript technologies including Next.js, React, Node.js, and MongoDB.
