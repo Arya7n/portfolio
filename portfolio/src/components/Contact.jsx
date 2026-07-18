@@ -16,7 +16,7 @@ const Contact = () => {
     },
     {
       label: "LinkedIn",
-      value: "aryan-46191b265",
+      value: "Aryan",
       href: profile.links.linkedin,
     },
     {
