@@ -1,239 +1,110 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Zap } from 'lucide-react';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { skills } from "@/data/content";
+import TextReveal from "@/components/TextReveal";
 
 const Skills = () => {
-  const [ref, inView] = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
-
-  const skillCategories = [
-    {
-      category: "Frontend",
-      color: "from-purple-400 to-purple-600",
-      skills: [
-        { name: "React.js", level: 90 },
-        { name: "Next.js", level: 85 },
-        { name: "Redux", level: 80 },
-        { name: "Tailwind CSS", level: 90 },
-      ]
-    },
-    {
-      category: "Backend",
-      color: "from-purple-500 to-purple-700",
-      skills: [
-        { name: "Node.js", level: 95 },
-        { name: "Express.js", level: 95 },
-        { name: "NestJS", level: 85 },
-        { name: "Microservices", level: 80 },
-      ]
-    },
-    {
-      category: "Database",
-      color: "from-purple-600 to-purple-800",
-      skills: [
-        { name: "MongoDB", level: 90 },
-        { name: "PostgreSQL", level: 85 },
-      ]
-    },
-    {
-      category: "Tools & DevOps",
-      color: "from-purple-700 to-purple-900",
-      skills: [
-        { name: "Git & GitHub", level: 90 },
-        { name: "Postman", level: 95 },
-        { name: "AWS Services", level: 75 },
-        { name: "Docker", level: 70 },
-      ]
-    }
-  ];
+  const [ref, inView] = useInView({ threshold: 0.15, triggerOnce: true });
+  const allSkills = skills.flatMap((g) => g.items);
 
   return (
-    <section id="skills" className="py-28 bg-gradient-to-b from-black via-purple-950/10 to-black relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-purple-800/10 rounded-full blur-3xl" />
-      </div>
+    <section id="skills" className="relative py-24 md:py-32 bg-ink text-paper overflow-hidden">
+      <div
+        className="absolute inset-0 opacity-30 pointer-events-none"
+        aria-hidden
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 20% 20%, rgba(216,230,223,0.12), transparent 40%), radial-gradient(circle at 80% 70%, rgba(42,107,85,0.2), transparent 35%)",
+        }}
+      />
 
-      {/* Animated grid */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0"
-          style={{
-            backgroundImage: `linear-gradient(rgba(147, 51, 234, 0.2) 1px, transparent 1px),
-                             linear-gradient(90deg, rgba(147, 51, 234, 0.2) 1px, transparent 1px)`,
-            backgroundSize: '60px 60px'
-          }}
-        />
-      </div>
+      <motion.div
+        className="absolute top-20 right-[10%] w-64 h-64 rounded-full border border-paper/5"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+        aria-hidden
+      />
+      <motion.div
+        className="absolute bottom-16 left-[8%] w-40 h-40 rounded-full border border-paper/5"
+        animate={{ rotate: -360 }}
+        transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
+        aria-hidden
+      />
 
-      <div className="max-w-6xl mx-auto px-6 relative z-10" ref={ref}>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-20"
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.4, type: "spring" }}
-            className="inline-block mb-4"
-          >
-            <span className="text-purple-500 text-sm font-mono tracking-wider">Expertise</span>
-          </motion.div>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
+      <div className="max-w-content mx-auto px-6 md:px-8 relative" ref={ref}>
+        <div className="mb-12 md:mb-16">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-6xl font-bold bg-gradient-to-r from-purple-200 via-purple-400 to-purple-200 bg-clip-text text-transparent mb-6"
+            className="font-mono text-xs tracking-[0.18em] uppercase text-paper/45 mb-3"
           >
-            Technical Skills
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : {}}
-            transition={{ delay: 0.2 }}
-            className="text-purple-300 text-xl mb-8"
-          >
-            Backend-focused with full-stack capabilities
+            Toolkit
           </motion.p>
-          <motion.div 
-            className="w-32 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto"
-            initial={{ width: 0 }}
-            animate={inView ? { width: 128 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          />
-        </motion.div>
+          <TextReveal>
+            <h2 className="font-display text-4xl md:text-5xl tracking-tight text-paper">
+              Skills
+            </h2>
+          </TextReveal>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {skillCategories.map((category, categoryIndex) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-14 md:mb-16">
+          {skills.map((group, index) => (
             <motion.div
-              key={categoryIndex}
-              initial={{ opacity: 0, y: 50 }}
+              key={group.label}
+              initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ 
-                duration: 0.8, 
-                delay: categoryIndex * 0.15,
-                type: "spring"
+              transition={{
+                duration: 0.5,
+                delay: 0.08 + index * 0.07,
+                ease: [0.22, 1, 0.36, 1],
               }}
-              whileHover={{ 
-                scale: 1.03,
-                y: -10,
-                boxShadow: "0 20px 60px rgba(147, 51, 234, 0.3)"
-              }}
-              className="bg-gradient-to-br from-purple-950/40 to-black backdrop-blur-sm border-2 border-purple-500/30 rounded-3xl p-10 hover:border-purple-400/50 transition-all duration-500 group relative overflow-hidden"
+              whileHover={{ y: -4 }}
+              className="rounded-2xl border border-paper/10 bg-paper/[0.03] p-5 md:p-6 hover:bg-paper/[0.07] hover:border-paper/25 transition-colors duration-300"
             >
-              {/* Animated background on hover */}
-              <motion.div 
-                className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              />
-              
-              <div className="relative">
-                <div className="flex items-center justify-between mb-8">
-                  <h3 className="text-3xl font-bold text-purple-100 group-hover:text-white transition-colors">
-                    {category.category}
-                  </h3>
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className="text-purple-400/30 group-hover:text-purple-400/60"
+              <h3 className="font-mono text-xs tracking-[0.16em] uppercase text-accent-mist mb-5">
+                {group.label}
+              </h3>
+              <ul className="space-y-0">
+                {group.items.map((item, i) => (
+                  <motion.li
+                    key={item}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={inView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.35, delay: 0.15 + index * 0.05 + i * 0.04 }}
+                    className="text-lg tracking-tight text-paper/90 border-b border-paper/10 py-2.5 last:border-0 flex items-center gap-3 group/item"
                   >
-                    <Zap size={32} />
-                  </motion.div>
-                </div>
-                
-                <div className="space-y-7">
-                  {category.skills.map((skill, skillIndex) => (
-                    <motion.div 
-                      key={skillIndex}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={inView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ delay: categoryIndex * 0.15 + skillIndex * 0.1 }}
-                    >
-                      <div className="flex justify-between mb-3">
-                        <span className="text-purple-200 font-semibold text-lg group-hover:text-white transition-colors">
-                          {skill.name}
-                        </span>
-                        <motion.span 
-                          className="text-purple-400 text-sm font-mono"
-                          initial={{ opacity: 0 }}
-                          animate={inView ? { opacity: 1 } : {}}
-                          transition={{ delay: categoryIndex * 0.15 + skillIndex * 0.1 + 0.3 }}
-                        >
-                          {skill.level}%
-                        </motion.span>
-                      </div>
-                      <div className="h-3 bg-black/50 rounded-full overflow-hidden border border-purple-900/50">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          animate={inView ? { width: `${skill.level}%` } : { width: 0 }}
-                          transition={{
-                            duration: 1.5,
-                            delay: categoryIndex * 0.15 + skillIndex * 0.1,
-                            ease: "easeOut"
-                          }}
-                          className={`h-full bg-gradient-to-r ${category.color} rounded-full relative overflow-hidden`}
-                        >
-                          {/* Animated shine effect */}
-                          <motion.div
-                            animate={{ x: ["-100%", "200%"] }}
-                            transition={{ 
-                              duration: 2, 
-                              repeat: Infinity, 
-                              repeatDelay: 1,
-                              ease: "easeInOut" 
-                            }}
-                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                          />
-                        </motion.div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
+                    <span className="w-1 h-1 rounded-full bg-accent-mist/70 shrink-0 group-hover/item:scale-150 transition-transform" />
+                    {item}
+                  </motion.li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>
 
-        {/* Tech stack badges */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center"
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          className="flex flex-wrap gap-2.5"
         >
-          <p className="text-purple-300 mb-8 text-lg">Technologies I work with:</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            {[
-              "JavaScript", "TypeScript", "React", "Next.js", "Node.js", 
-              "Express", "NestJS", "MongoDB", "PostgreSQL", "REST APIs", 
-              "Git", "AWS", "Docker"
-            ].map((tech, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={inView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ 
-                  duration: 0.4, 
-                  delay: 0.9 + index * 0.05,
-                  type: "spring",
-                  stiffness: 200
-                }}
-                whileHover={{ 
-                  scale: 1.2, 
-                  y: -5,
-                  boxShadow: "0 10px 30px rgba(147, 51, 234, 0.4)",
-                  backgroundColor: "rgba(147, 51, 234, 0.2)"
-                }}
-                className="px-6 py-3 bg-purple-950/40 border-2 border-purple-500/30 rounded-full text-sm font-medium text-purple-200 hover:border-purple-400/60 hover:text-white transition-all duration-300 cursor-pointer backdrop-blur-sm"
-              >
-                {tech}
-              </motion.span>
-            ))}
-          </div>
+          {allSkills.map((skill, i) => (
+            <motion.span
+              key={skill}
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={inView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.35, delay: 0.4 + i * 0.03 }}
+              whileHover={{
+                y: -3,
+                scale: 1.04,
+                backgroundColor: "rgba(216,230,223,0.18)",
+                borderColor: "rgba(216,230,223,0.35)",
+              }}
+              className="px-3.5 py-1.5 text-sm text-paper/80 border border-paper/15 rounded-full cursor-default"
+            >
+              {skill}
+            </motion.span>
+          ))}
         </motion.div>
       </div>
     </section>

@@ -1,149 +1,89 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Heart, ArrowUp } from 'lucide-react';
+import { motion } from "framer-motion";
+import { ArrowUp } from "lucide-react";
+import { navItems, profile } from "@/data/content";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const year = new Date().getFullYear();
 
-  const socialLinks = [
-    {
-      icon: <Github size={22} />,
-      href: "https://github.com/Arya7n",
-      label: "GitHub"
-    },
-    { 
-      icon: <Linkedin size={22} />,
-      href: "https://www.linkedin.com/in/aryan-46191b265",
-      label: "LinkedIn"
-    },
-    {
-      icon: <Mail size={22} />, 
-      href: "mailto:aryan11jr@gmail.com",
-      label: "Email"
+  const scrollTo = (id) => {
+    if (id === "top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
     }
-  ];
-
-  const scrollToSection = (sectionId) => {  
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
-
-  const scrollToTop = () => { 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const quickLinks = [
-    { label: 'About', id: 'about' },
-    { label: 'Skills', id: 'skills' },
-    { label: 'Projects', id: 'projects' },
-    { label: 'Contact', id: 'contact' },
-  ];
 
   return (
-    <footer className="bg-black border-t-2 border-purple-500/30 relative overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-96 h-32 bg-purple-600/10 blur-3xl" />
-      
-      <div className="max-w-6xl mx-auto px-6 py-16 relative z-10">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
-          {/* Brand */}     
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+    <footer className="border-t border-ink/10 bg-paper-soft/40 relative overflow-hidden">
+      <motion.div
+        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent"
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+        aria-hidden
+      />
+
+      <div className="max-w-content mx-auto px-6 md:px-8 py-12 md:py-16">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10 mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
           >
-            <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-300 to-purple-500 bg-clip-text text-transparent mb-4 font-mono">
-              &lt;Aryan /&gt;
-            </h3>
-            <p className="text-purple-300 text-sm leading-relaxed">
-              Full Stack Developer passionate about building scalable backend systems and modern web applications.
+            <p className="font-display text-3xl tracking-tight text-ink mb-2">
+              {profile.name}
             </p>
-          </motion.div> 
-
-          {/* Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
-            <h4 className="text-purple-200 font-bold text-lg mb-6">Quick Links</h4>
-            <div className="flex flex-col gap-3"> 
-              {quickLinks.map((link, index) => (
-                <motion.button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  whileHover={{ x: 5, color: '#ffffff' }}
-                  className="text-purple-400 hover:text-white transition-all text-left text-sm flex items-center gap-2"
-                >
-                  <span className="text-purple-500">→</span> {link.label}
-                </motion.button>
-              ))}
-            </div> 
+            <p className="text-sm text-ink-muted">
+              {profile.title} · {profile.focus}
+            </p>
           </motion.div>
 
-          {/* Social Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
+          <nav className="flex flex-wrap gap-x-6 gap-y-2">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollTo(item.id)}
+                className="text-sm text-ink-muted hover:text-ink transition-colors relative after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-0 after:bg-accent after:transition-all hover:after:w-full"
+              >
+                {item.label}
+              </button>
+            ))}
+          </nav>
+
+          <motion.button
+            onClick={() => scrollTo("top")}
+            whileHover={{ y: -2 }}
+            className="inline-flex items-center gap-2 text-sm text-ink-muted hover:text-ink transition-colors self-start"
+            aria-label="Back to top"
           >
-            <h4 className="text-purple-200 font-bold text-lg mb-6">Connect</h4>
-            <div className="flex gap-4">
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.1, y: -5, rotate: 5 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="p-4 bg-purple-950/40 border-2 border-purple-500/30 rounded-xl text-purple-400 hover:text-white hover:border-purple-400/60 hover:bg-purple-900/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(147,51,234,0.3)]"
-                  aria-label={social.label}
-                >
-                  {social.icon}
-                </motion.a>
-              ))}
-            </div>
-          </motion.div>
+            Back to top
+            <ArrowUp size={14} />
+          </motion.button>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t-2 border-purple-500/30">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <motion.p 
-              className="text-purple-400 text-sm"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-8 border-t border-ink/8">
+          <p className="text-xs text-ink-faint">
+            © {year} {profile.name}. All rights reserved.
+          </p>
+          <div className="flex gap-5">
+            <a
+              href={profile.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-ink-faint hover:text-ink transition-colors"
             >
-              © {currentYear} Aryan. All rights reserved.
-            </motion.p>
-            
-            <motion.p 
-              className="text-purple-400 text-sm flex items-center gap-2"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              viewport={{ once: true }}
+              GitHub
+            </a>
+            <a
+              href={profile.links.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-ink-faint hover:text-ink transition-colors"
             >
-              Built with <Heart size={14} className="text-purple-500 fill-purple-500 animate-pulse" /> using React & Framer Motion
-            </motion.p>
-
-            <motion.button
-              onClick={scrollToTop}
-              whileHover={{ scale: 1.1, y: -5 }}
-              whileTap={{ scale: 0.9 }}
-              className="p-3 bg-purple-950/40 border-2 border-purple-500/30 rounded-xl text-purple-400 hover:text-white hover:border-purple-400/60 hover:bg-purple-900/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(147,51,234,0.3)]"
-              aria-label="Scroll to top"
-            >
-              <ArrowUp size={20} />
-            </motion.button>
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>
