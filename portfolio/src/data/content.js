@@ -1,6 +1,6 @@
 export const profile = {
   name: "Aryan",
-  title: "MERN Stack Developer",
+  title: "Full Stack Developer",
   focus: "Backend-Focused",
   email: "aryan11jr@gmail.com",
   phone: "+91 78763 89507",
@@ -58,12 +58,12 @@ export const projects = [
     featured: true,
   },
   {
-    title: "HRMS",
+    title: "DevTunnel",
     description:
-      "Human resource management dashboard for day-to-day HR workflows — built for clarity and operational speed.",
-    tech: ["React", "Node.js", "JavaScript"],
-    github: "https://github.com/Arya7n/HRMS",
-    live: "https://hrms-three-black.vercel.app",
+      "Ongoing open-source localhost tunnelling platform — expose local apps with a public HTTPS URL via CLI, NestJS tunnel engine, real-time dashboard, and request inspection. Built with NestJS, Next.js, TypeScript, WebSockets, Redis, and PostgreSQL.",
+    tech: ["NestJS", "Next.js", "TypeScript", "WebSockets", "Redis", "PostgreSQL"],
+    github: "https://github.com/Arya7n/devtunnel",
+    live: null,
     featured: true,
   },
   {
