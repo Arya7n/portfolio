@@ -1,21 +1,19 @@
 /**
  * Timing for the paper resume sequence (ms).
- * No image slicing / letter-fold panels — screenshot stays whole.
+ * Tuned short + smooth — total motion ≈ 3.2s after capture.
  */
 
 export const PAPER_TIMING = {
-  pauseMs: 120,
-  scanMs: 850,
-  liftMs: 750,
-  holdMs: 500,
-  /** Whole-sheet soft curl into document proportions */
-  curlMs: 900,
-  documentMs: 650,
-  presentMs: 700,
-  tiltMs: 500,
-  floatMs: 360,
-  launchMs: 560,
-  settleMs: 400,
+  pauseMs: 80,
+  liftMs: 480,
+  holdMs: 200,
+  curlMs: 520,
+  documentMs: 320,
+  presentMs: 420,
+  tiltMs: 280,
+  floatMs: 160,
+  launchMs: 400,
+  settleMs: 260,
 };
 
 /** @deprecated kept empty so old imports don't break */

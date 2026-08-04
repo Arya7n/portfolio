@@ -59,7 +59,7 @@ export default function PaperFoldOverlay() {
             animate={{
               opacity: showDim ? 0.4 : 0,
             }}
-            transition={{ duration: 0.55, ease: PAPER_EASE }}
+            transition={{ duration: 0.35, ease: PAPER_EASE }}
             style={{
               background:
                 "radial-gradient(ellipse 75% 65% at 50% 42%, rgba(243,243,240,0.2), rgba(18,18,18,0.35))",

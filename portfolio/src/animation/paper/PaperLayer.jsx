@@ -139,16 +139,16 @@ export default function PaperLayer({ state }) {
         transition={
           launching
             ? {
-                duration: 0.56,
+                duration: 0.4,
                 ease: LAUNCH_EASE,
-                opacity: { duration: 0.42, delay: 0.12, ease: "easeIn" },
+                opacity: { duration: 0.28, delay: 0.08, ease: "easeIn" },
               }
             : {
-                width: { duration: 0.9, ease: PAPER_EASE },
-                height: { duration: 0.9, ease: PAPER_EASE },
-                boxShadow: { duration: 0.7, ease: PAPER_EASE },
-                opacity: { duration: 0.4, ease: PAPER_EASE },
-                default: { duration: 0.75, ease: PAPER_EASE },
+                width: { duration: 0.52, ease: PAPER_EASE },
+                height: { duration: 0.52, ease: PAPER_EASE },
+                boxShadow: { duration: 0.45, ease: PAPER_EASE },
+                opacity: { duration: 0.28, ease: PAPER_EASE },
+                default: { duration: 0.48, ease: PAPER_EASE },
               }
         }
       >
@@ -173,7 +173,7 @@ export default function PaperLayer({ state }) {
             animate={{
               opacity: showShot ? (isCurl ? 0.35 : 1) : 0,
             }}
-            transition={{ duration: 0.55, ease: PAPER_EASE }}
+            transition={{ duration: 0.35, ease: PAPER_EASE }}
             style={{ pointerEvents: "none" }}
           >
             <img
@@ -196,7 +196,7 @@ export default function PaperLayer({ state }) {
             }}
             initial={false}
             animate={{ opacity: isDoc || isCurl ? (isCurl ? 0.7 : 1) : 0 }}
-            transition={{ duration: 0.55, ease: PAPER_EASE }}
+            transition={{ duration: 0.35, ease: PAPER_EASE }}
           >
             <div
               aria-hidden
@@ -220,7 +220,7 @@ export default function PaperLayer({ state }) {
                 opacity: showTitle ? 1 : 0,
                 y: showTitle ? 0 : 8,
               }}
-              transition={{ duration: 0.5, ease: PAPER_EASE }}
+              transition={{ duration: 0.32, ease: PAPER_EASE }}
             >
               <p
                 className="font-mono text-[10px] tracking-[0.24em] uppercase"
@@ -246,7 +246,7 @@ export default function PaperLayer({ state }) {
                   opacity: showStamp ? 1 : 0,
                   scale: showStamp ? 1 : 0.94,
                 }}
-                transition={{ duration: 0.45, ease: FOLD_EASE }}
+                transition={{ duration: 0.28, ease: FOLD_EASE }}
               >
                 <span
                   className="inline-flex h-4 w-4 items-center justify-center rounded-full text-[10px]"
@@ -271,7 +271,7 @@ export default function PaperLayer({ state }) {
             className="pointer-events-none absolute -inset-14 -z-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: launching ? 0.1 : 0.55 }}
-            transition={{ duration: 0.55, ease: PAPER_EASE }}
+            transition={{ duration: 0.35, ease: PAPER_EASE }}
             style={{
               background:
                 "radial-gradient(ellipse at center, rgba(216,230,223,0.8) 0%, rgba(243,243,240,0) 70%)",

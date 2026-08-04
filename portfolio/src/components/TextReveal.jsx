@@ -11,7 +11,10 @@ const TextReveal = ({
   const MotionTag = motion[Tag] || motion.div;
 
   return (
-    <div ref={ref} className={`overflow-hidden ${className}`}>
+    <div
+      ref={ref}
+      className={`overflow-hidden pb-[0.18em] -mb-[0.06em] ${className}`}
+    >
       <MotionTag
         initial={{ y: "110%", opacity: 0 }}
         animate={inView ? { y: "0%", opacity: 1 } : {}}

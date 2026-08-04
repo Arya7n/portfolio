@@ -143,9 +143,12 @@ const Hero = () => {
           </p>
         </motion.div>
 
-        <h1 className="font-display text-[clamp(4.5rem,18vw,11rem)] leading-[0.85] tracking-tightest text-ink mb-8 md:mb-10 overflow-hidden">
+        <h1 className="font-display text-[clamp(4.5rem,18vw,11rem)] leading-[0.95] tracking-tightest text-ink mb-8 md:mb-10">
           <span className="sr-only">{profile.name}</span>
-          <span aria-hidden className="inline-flex">
+          <span
+            aria-hidden
+            className="inline-flex overflow-hidden pb-[0.2em] -mb-[0.08em]"
+          >
             {nameLetters.map((letter, i) => (
               <motion.span
                 key={`${letter}-${i}`}
@@ -172,11 +175,11 @@ const Hero = () => {
             transition={{ duration: 0.65, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
             className="md:col-span-7"
           >
-            <h2 className="text-xl md:text-2xl font-medium tracking-tight text-ink text-balance mb-4">
+            <h2 className="text-xl md:text-2xl font-medium tracking-tight text-ink text-balance mb-4 leading-snug">
               {profile.title}
               <span className="text-ink-muted font-normal"> — {profile.focus}</span>
             </h2>
-            <p className="text-base md:text-lg text-ink-muted leading-relaxed max-w-xl text-balance">
+            <p className="text-base md:text-lg text-ink-muted leading-[1.7] max-w-xl text-balance">
               {profile.summary}
             </p>
           </motion.div>

@@ -48,5 +48,5 @@ export function getLaunchTarget(viewW, viewH) {
 }
 
 export const PAPER_EASE = [0.22, 1, 0.36, 1];
-export const FOLD_EASE = [0.4, 0.0, 0.2, 1];
-export const LAUNCH_EASE = [0.55, 0.0, 0.85, 0.15];
+export const FOLD_EASE = [0.33, 0.0, 0.2, 1];
+export const LAUNCH_EASE = [0.5, 0.0, 0.8, 0.1];
