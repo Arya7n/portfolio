@@ -10,6 +10,7 @@ import {
 import { ArrowDown, ArrowDownRight, Github, Linkedin } from "lucide-react";
 import { profile } from "@/data/content";
 import MagneticButton from "@/components/MagneticButton";
+import { handleResumeDownloadClick } from "@/animation";
 
 const nameLetters = profile.name.split("");
 
@@ -247,6 +248,7 @@ const Hero = () => {
             <a
               href={profile.links.resume}
               download
+              onClick={handleResumeDownloadClick}
               className="inline-flex items-center gap-2 px-3.5 py-2 rounded-md bg-ink text-paper text-sm hover:bg-ink-soft transition-colors"
             >
               Resume

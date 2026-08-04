@@ -12,6 +12,7 @@ import Projects from "@/components/Projects";
 import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { PaperFoldOverlay } from "@/animation";
 
 const marqueeItems = [
   "Node.js",
@@ -34,22 +35,25 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <ScrollProgress />
-      <Header />
-      <main>
-        <Hero />
-        <Marquee items={marqueeItems} speed={25} />
-        <About />
-        <Capabilities />
-        <Experience />
-        <Projects />
-        <Skills />
-        <CTA />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <div className="App" id="portfolio-root">
+        <ScrollProgress />
+        <Header />
+        <main>
+          <Hero />
+          <Marquee items={marqueeItems} speed={25} />
+          <About />
+          <Capabilities />
+          <Experience />
+          <Projects />
+          <Skills />
+          <CTA />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+      <PaperFoldOverlay />
+    </>
   );
 }
 

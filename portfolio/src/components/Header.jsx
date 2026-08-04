@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { navItems, profile } from "@/data/content";
+import { handleResumeDownloadClick } from "@/animation";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -87,6 +88,7 @@ const Header = () => {
             <a
               href={profile.links.resume}
               download
+              onClick={handleResumeDownloadClick}
               className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium tracking-tight text-ink border border-ink/15 rounded-md hover:border-ink/40 hover:bg-paper-soft/80 transition-colors"
             >
               Resume
@@ -129,6 +131,10 @@ const Header = () => {
                 <a
                   href={profile.links.resume}
                   download
+                  onClick={(e) => {
+                    setIsMobileMenuOpen(false);
+                    handleResumeDownloadClick(e);
+                  }}
                   className="text-left px-2 py-3 text-base tracking-tight text-accent font-medium"
                 >
                   Download resume

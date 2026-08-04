@@ -4,6 +4,7 @@ import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import { profile } from "@/data/content";
 import MagneticButton from "@/components/MagneticButton";
 import TextReveal from "@/components/TextReveal";
+import { handleResumeDownloadClick } from "@/animation";
 
 const CTA = () => {
   const [ref, inView] = useInView({ threshold: 0.25, triggerOnce: true });
@@ -80,6 +81,7 @@ const CTA = () => {
               as="a"
               href={profile.links.resume}
               download
+              onClick={handleResumeDownloadClick}
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-paper/25 text-paper text-sm font-medium tracking-tight rounded-md hover:border-paper/50 hover:bg-paper/5 transition-colors"
             >
               Download resume
