@@ -17,16 +17,19 @@ import { PaperFoldOverlay } from "@/animation";
 const marqueeItems = [
   "Node.js",
   "TypeScript",
+  "NestJS",
   "React",
   "Next.js",
   "MongoDB",
   "PostgreSQL",
+  "Prisma",
   "Redis",
   "Docker",
+  "WebSockets",
   "BullMQ",
   "AWS",
+  "Three.js",
   "Microservices",
-  "Express",
 ];
 
 function App() {

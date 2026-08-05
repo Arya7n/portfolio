@@ -64,11 +64,7 @@ const About = () => {
             className="md:col-span-8 space-y-12"
           >
             <p className="text-lg md:text-xl leading-relaxed text-ink-soft text-balance">
-              I&apos;m a {profile.title.toLowerCase()} with hands-on experience shipping
-              production systems — from microservices and Redis-backed queues to
-              MongoDB performance work and AWS-integrated workflows. I care about
-              clean architecture, measurable performance, and code that teams can
-              maintain.
+              {profile.summary}
             </p>
 
             <div className="grid grid-cols-3 gap-4 md:gap-6">
@@ -123,11 +119,11 @@ const About = () => {
                 </p>
                 <p className="font-medium tracking-tight mb-1">Backend systems & APIs</p>
                 <p className="text-paper/65 text-sm leading-relaxed">
-                  Node.js · TypeScript · Microservices
+                  Node.js · TypeScript · NestJS
                   <br />
-                  Redis · Docker · AWS (S3, SES)
+                  Microservices · WebSockets · Redis
                   <br />
-                  MongoDB · Performance optimization
+                  Docker · AWS · PostgreSQL · MongoDB
                 </p>
               </motion.div>
             </div>

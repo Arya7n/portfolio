@@ -6,7 +6,7 @@ export const profile = {
   phone: "+91 78763 89507",
   location: "Mohali, Punjab",
   summary:
-    "Building scalable backend systems with Node.js, TypeScript, and microservices. Experienced with Redis, Docker, and AWS — focused on performance, clean architecture, and production-grade apps.",
+    "Full Stack Developer with professional experience building scalable backend systems and modern web apps using Node.js, TypeScript, NestJS, React, and Next.js. Experienced in microservices, WebSockets, Redis, Docker, PostgreSQL, and MongoDB — focused on backend architecture, performance, and distributed systems.",
   links: {
     github: "https://github.com/Arya7n",
     linkedin: "https://www.linkedin.com/in/aryan-46191b265",
@@ -27,27 +27,47 @@ export const experience = [
     role: "MERN Stack Developer",
     period: "Dec 2025 — Present",
     highlights: [
-      "Built scalable backend services with Node.js, TypeScript, and microservices architecture.",
-      "Implemented Docker, Redis, and BullMQ for containerization, caching, and background jobs.",
-      "Integrated AWS S3 and SES for storage and email workflows.",
-      "Optimized MongoDB aggregation pipelines, improving query performance by ~40%.",
-      "Shipped notification and real-time chat services; mentored interns on a SaaS elevator-management product.",
+      "Designed and developed scalable backend services using Node.js, TypeScript, and microservices architecture.",
+      "Implemented Docker, Redis, and BullMQ for containerization, caching, and background processing.",
+      "Integrated AWS (S3, SES) for storage and email workflows.",
+      "Optimized MongoDB aggregation pipelines, improving query performance by 40%.",
+      "Developed key features including notification and real-time chat services.",
+      "Built and optimized REST APIs with efficient architecture, reducing response time and improving performance by 30–40%.",
     ],
   },
   {
-    company: "NetscapeLabs Infotech",
+    company: "NetscapeLabs Infotech Pvt. Ltd.",
     role: "MERN Stack Developer (Trainee)",
-    period: "July 2025 — December 2025",
+    period: "Jun 2025 — Nov 2025",
     highlights: [
-      "Built and deployed 2 live production apps with Next.js, React, and Node.js.",
-      "Created reusable UI with Tailwind CSS and Shadcn for maintainability.",
-      "Added real-time notifications with Socket.io; integrated REST APIs and Firebase.",
-      "Collaborated across teams to cut page load time by ~30% and improve SEO.",
+      "Built and deployed 2 live production applications using Next.js, React.js, and Node.js.",
+      "Developed reusable UI components using Tailwind CSS and Shadcn, improving code reusability and maintainability.",
+      "Implemented real-time features like live notifications and updates using Socket.io.",
+      "Integrated REST APIs and Firebase for authentication, data storage, and analytics.",
+      "Collaborated with backend and UI teams to optimize page load performance by 30% and enhance SEO.",
     ],
   },
 ];
 
 export const projects = [
+  {
+    title: "DevTunnel",
+    description:
+      "Self-hosted ngrok-style tunneling platform — secure public access to local apps via CLI and web dashboard. Real-time HTTP tunneling over WebSockets, JWT + API key auth, NestJS/PostgreSQL/Redis backend, and a Next.js dashboard for live traffic inspection.",
+    tech: [
+      "TypeScript",
+      "NestJS",
+      "Next.js",
+      "PostgreSQL",
+      "Prisma",
+      "Redis",
+      "Docker",
+      "WebSockets",
+    ],
+    github: "https://github.com/Arya7n/devtunnel",
+    live: null,
+    featured: true,
+  },
   {
     title: "Cartify",
     description:
@@ -58,12 +78,12 @@ export const projects = [
     featured: true,
   },
   {
-    title: "DevTunnel",
+    title: "One Piece",
     description:
-      "Ongoing open-source localhost tunnelling platform — expose local apps with a public HTTPS URL via CLI, NestJS tunnel engine, real-time dashboard, and request inspection. Built with NestJS, Next.js, TypeScript, WebSockets, Redis, and PostgreSQL.",
-    tech: ["NestJS", "Next.js", "TypeScript", "WebSockets", "Redis", "PostgreSQL"],
-    github: "https://github.com/Arya7n/devtunnel",
-    live: null,
+      "Three.js One Piece–inspired open world — play as Luffy and Zoro, explore islands, swim, smash barrels, and sail the Going Merry. Gear 5 stretch attacks, triple-slash VFX, collectibles, and a boardable pirate ship.",
+    tech: ["Three.js", "JavaScript", "Vite"],
+    github: "https://github.com/Arya7n/one-piece",
+    live: "https://onepiece3js.vercel.app/",
     featured: true,
   },
   {
@@ -84,19 +104,31 @@ export const skills = [
   },
   {
     label: "Backend",
-    items: ["Node.js", "Express.js", "REST APIs", "Microservices"],
+    items: [
+      "Node.js",
+      "Nest.js",
+      "Express.js",
+      "REST APIs",
+      "Socket.IO",
+      "WebSockets",
+      "Microservices",
+    ],
   },
   {
     label: "Frontend",
-    items: ["React.js", "Next.js", "Redux", "Tailwind CSS"],
+    items: ["React.js", "Next.js", "Redux", "Tailwind CSS", "HTML5", "CSS3"],
   },
   {
-    label: "Databases",
-    items: ["MongoDB", "PostgreSQL"],
+    label: "Databases & ORMs",
+    items: ["MongoDB", "PostgreSQL", "Prisma", "Mongoose"],
   },
   {
-    label: "Tools & DevOps",
-    items: ["Docker", "Redis", "BullMQ", "AWS (S3, SES)", "PM2", "Git"],
+    label: "Cloud & DevOps",
+    items: ["Docker", "Redis", "BullMQ", "AWS (S3, SES)", "PM2"],
+  },
+  {
+    label: "Tools",
+    items: ["Git", "GitHub", "Postman", "Firebase", "Linux"],
   },
 ];
 
@@ -104,7 +136,7 @@ export const capabilities = [
   {
     title: "Backend systems",
     description:
-      "Node.js and TypeScript services with clean architecture, REST APIs, and microservices that hold up in production.",
+      "Node.js, TypeScript, and NestJS services with clean architecture, REST APIs, WebSockets, and microservices that hold up in production.",
   },
   {
     title: "Performance",
