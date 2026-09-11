@@ -50,7 +50,7 @@ const CTA = () => {
             </motion.p>
             <TextReveal>
               <h2 className="font-display text-4xl md:text-5xl lg:text-6xl tracking-tight text-paper text-balance mb-5">
-                Looking for a backend-focused MERN engineer?
+                Looking for a backend-focused software engineer?
               </h2>
             </TextReveal>
             <motion.p

@@ -1,12 +1,12 @@
 export const profile = {
   name: "Aryan",
-  title: "Full Stack Developer",
-  focus: "Backend-Focused",
+  title: "Software Engineer",
+  focus: "Full Stack · Backend-focused",
   email: "aryan11jr@gmail.com",
   phone: "+91 78763 89507",
   location: "Mohali, Punjab",
   summary:
-    "Full Stack Developer with professional experience building scalable backend systems and modern web apps using Node.js, TypeScript, NestJS, React, and Next.js. Experienced in microservices, WebSockets, Redis, Docker, PostgreSQL, and MongoDB — focused on backend architecture, performance, and distributed systems.",
+    "Software Engineer with professional experience building scalable backend systems and modern web apps using Node.js, TypeScript, NestJS, React, and Next.js. Experienced in microservices, WebSockets, Redis, Docker, PostgreSQL, and MongoDB — focused on backend architecture, performance, and distributed systems.",
   links: {
     github: "https://github.com/Arya7n",
     linkedin: "https://www.linkedin.com/in/aryan-46191b265",
@@ -24,7 +24,7 @@ export const education = {
 export const experience = [
   {
     company: "PSQUARE COMPANY",
-    role: "MERN Stack Developer",
+    role: "Full Stack Developer",
     period: "Dec 2025 — Present",
     highlights: [
       "Designed and developed scalable backend services using Node.js, TypeScript, and microservices architecture.",
@@ -37,7 +37,7 @@ export const experience = [
   },
   {
     company: "NetscapeLabs Infotech Pvt. Ltd.",
-    role: "MERN Stack Developer (Trainee)",
+    role: "Full Stack Developer (Trainee)",
     period: "Jun 2025 — Nov 2025",
     highlights: [
       "Built and deployed 2 live production applications using Next.js, React.js, and Node.js.",
