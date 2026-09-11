@@ -69,6 +69,47 @@ export const projects = [
     featured: true,
   },
   {
+    title: "JobMate",
+    description:
+      "Local-first Chrome extension that stores your professional profile and resumes on-device, autofills job applications with confidence-based field detection, and tracks every submission — no backend, account, or analytics.",
+    tech: [
+      "TypeScript",
+      "React",
+      "WXT",
+      "Chrome Extension",
+      "IndexedDB",
+      "Tailwind",
+    ],
+    github: "https://github.com/Arya7n/JobMate",
+    live: null,
+    featured: true,
+  },
+  {
+    title: "Time Machine",
+    description:
+      "Immersive interactive site that travels through time — drag the timeline, scroll, or use the keys and the entire interface morphs with the year. Built with React, Three.js, GSAP, and Lenis.",
+    tech: [
+      "TypeScript",
+      "React",
+      "Three.js",
+      "GSAP",
+      "Framer Motion",
+      "Tailwind",
+    ],
+    github: "https://github.com/Arya7n/time-travel",
+    live: "https://time-travel-sage.vercel.app",
+    featured: true,
+  },
+  {
+    title: "Portfolio OS",
+    description:
+      "Interactive portfolio that boots as a desktop OS — windowed apps for experience, projects, and skills, a working terminal, recruiter mode, and Three.js wallpaper scenes.",
+    tech: ["TypeScript", "React", "Three.js", "Zustand", "Framer Motion", "Vite"],
+    github: "https://github.com/Arya7n/portfolio-Os",
+    live: "https://portfolioos-phi.vercel.app",
+    featured: true,
+  },
+  {
     title: "Cartify",
     description:
       "Full-stack e-commerce platform with JWT auth, Razorpay payments, admin dashboard, invoice generation, and role-based access.",
@@ -116,7 +157,7 @@ export const skills = [
   },
   {
     label: "Frontend",
-    items: ["React.js", "Next.js", "Redux", "Tailwind CSS", "HTML5", "CSS3"],
+    items: ["React.js", "Next.js", "Redux", "Tailwind CSS", "Three.js", "HTML5", "CSS3"],
   },
   {
     label: "Databases & ORMs",
@@ -128,7 +169,7 @@ export const skills = [
   },
   {
     label: "Tools",
-    items: ["Git", "GitHub", "Postman", "Firebase", "Linux"],
+    items: ["Git", "GitHub", "Postman", "Firebase", "Linux", "Chrome Extensions"],
   },
 ];
 
