@@ -20,15 +20,16 @@ const marqueeItems = [
   "NestJS",
   "React",
   "Next.js",
+  "Electron",
   "MongoDB",
   "PostgreSQL",
   "Prisma",
   "Redis",
   "Docker",
   "WebSockets",
-  "BullMQ",
-  "AWS",
   "Three.js",
+  "Neon",
+  "AWS",
   "Microservices",
 ];
 

@@ -7,6 +7,7 @@ import TextReveal from "@/components/TextReveal";
 const Projects = () => {
   const [ref, inView] = useInView({ threshold: 0.08, triggerOnce: true });
   const featured = projects.filter((p) => p.featured);
+  const more = projects.filter((p) => !p.featured);
 
   return (
     <section id="projects" className="relative py-24 md:py-32 border-t border-ink/8 overflow-hidden">
@@ -52,7 +53,7 @@ const Projects = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{
                 duration: 0.55,
-                delay: 0.08 + index * 0.08,
+                delay: 0.08 + index * 0.06,
                 ease: [0.22, 1, 0.36, 1],
               }}
               className="group relative grid md:grid-cols-12 gap-5 md:gap-8 rounded-2xl border border-ink/10 bg-paper p-6 md:p-8 overflow-hidden transition-all duration-400 hover:border-accent/30 hover:-translate-y-1 hover:shadow-[0_28px_50px_-30px_rgba(18,18,18,0.4)]"
@@ -135,6 +136,50 @@ const Projects = () => {
             </motion.article>
           ))}
         </div>
+
+        {more.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.35 }}
+            className="mt-16 pt-12 border-t border-ink/10"
+          >
+            <p className="font-mono text-xs tracking-[0.16em] uppercase text-ink-muted mb-8">
+              More projects
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 md:gap-5">
+              {more.map((project, i) => (
+                <motion.a
+                  key={project.title}
+                  href={project.live || project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.4 + i * 0.06 }}
+                  whileHover={{ y: -3 }}
+                  className="group block rounded-2xl border border-ink/10 bg-paper-soft/50 p-5 hover:bg-paper hover:border-accent/25 transition-colors"
+                >
+                  <div className="flex items-start justify-between gap-3 mb-2">
+                    <h4 className="text-base font-medium tracking-tight text-ink group-hover:text-accent transition-colors">
+                      {project.title}
+                    </h4>
+                    <ArrowUpRight
+                      size={14}
+                      className="text-ink-faint group-hover:text-accent shrink-0 mt-1 transition-all"
+                    />
+                  </div>
+                  <p className="text-sm text-ink-muted leading-relaxed mb-3">
+                    {project.description}
+                  </p>
+                  <p className="font-mono text-[11px] text-ink-faint">
+                    {project.tech.join(" · ")}
+                  </p>
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+        )}
       </div>
     </section>
   );

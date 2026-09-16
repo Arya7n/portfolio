@@ -6,7 +6,7 @@ export const profile = {
   phone: "+91 78763 89507",
   location: "Mohali, Punjab",
   summary:
-    "Software Engineer with professional experience building scalable backend systems and modern web apps using Node.js, TypeScript, NestJS, React, and Next.js. Experienced in microservices, WebSockets, Redis, Docker, PostgreSQL, and MongoDB — focused on backend architecture, performance, and distributed systems.",
+    "Software Engineer with 1.5+ years of experience building scalable backend systems and modern web apps using Node.js, TypeScript, NestJS, React, and Next.js. Experienced in microservices, WebSockets, Redis, Docker, PostgreSQL, and MongoDB — focused on backend architecture, performance, and shipping real products.",
   links: {
     github: "https://github.com/Arya7n",
     linkedin: "https://www.linkedin.com/in/aryan-46191b265",
@@ -51,9 +51,26 @@ export const experience = [
 
 export const projects = [
   {
+    title: "Cursor Tracker",
+    description:
+      "Company hub for Cursor usage — a desktop/CLI agent on each PC reads local Cursor data and reports only aggregates (plan, %, billing cycle) to a Next.js dashboard on Neon Postgres. Cursor login tokens never leave the machine.",
+    tech: [
+      "TypeScript",
+      "Next.js",
+      "Electron",
+      "Node.js",
+      "PostgreSQL",
+      "Neon",
+      "Vercel",
+    ],
+    github: "https://github.com/Arya7n/cursor-tracker",
+    live: "https://cursor-tracker-nu.vercel.app",
+    featured: true,
+  },
+  {
     title: "DevTunnel",
     description:
-      "Self-hosted ngrok-style tunneling platform — secure public access to local apps via CLI and web dashboard. Real-time HTTP tunneling over WebSockets, JWT + API key auth, NestJS/PostgreSQL/Redis backend, and a Next.js dashboard for live traffic inspection.",
+      "Self-hosted ngrok-style tunneling platform — secure public access to local apps via CLI and web dashboard. Real-time HTTP tunneling over WebSockets, JWT + API key auth, NestJS/PostgreSQL/Redis backend, and live traffic inspection.",
     tech: [
       "TypeScript",
       "NestJS",
@@ -69,35 +86,19 @@ export const projects = [
     featured: true,
   },
   {
-    title: "Cursor Tracker",
+    title: "APEX",
     description:
-      "Company hub for Cursor usage — a desktop/CLI agent on each PC reads local Cursor data and reports only aggregates (plan, %, billing cycle) to a Next.js dashboard on Neon Postgres. Cursor login tokens never leave the machine. Admins see enrolled developers, sync status, and usage meters; installers ship via GitHub Releases (Windows .exe, Linux AppImage).",
-    tech: [
-      "TypeScript",
-      "Next.js",
-      "Electron",
-      "Node.js",
-      "PostgreSQL",
-      "Neon",
-      "Vercel",
-      "Tailwind",
-    ],
-    github: "https://github.com/Arya7n/cursor-tracker",
-    live: "https://cursor-tracker-nu.vercel.app",
+      "Premium motorcycle intelligence platform — browse machines, compare specs, and explore a modern product experience built for riders and enthusiasts.",
+    tech: ["TypeScript", "React", "Next.js", "Tailwind"],
+    github: "https://github.com/Arya7n/APEX",
+    live: "https://apex-bikes.vercel.app/",
     featured: true,
   },
   {
     title: "JobMate",
     description:
-      "Local-first Chrome extension that stores your professional profile and resumes on-device, autofills job applications with confidence-based field detection, and tracks every submission — no backend, account, or analytics.",
-    tech: [
-      "TypeScript",
-      "React",
-      "WXT",
-      "Chrome Extension",
-      "IndexedDB",
-      "Tailwind",
-    ],
+      "Local-first Chrome extension that stores your profile and resumes on-device, autofills job applications with confidence-based field detection, and tracks submissions — no backend or analytics.",
+    tech: ["TypeScript", "React", "WXT", "Chrome Extension", "IndexedDB"],
     github: "https://github.com/Arya7n/JobMate",
     live: null,
     featured: true,
@@ -105,15 +106,8 @@ export const projects = [
   {
     title: "Time Machine",
     description:
-      "Immersive interactive site that travels through time — drag the timeline, scroll, or use the keys and the entire interface morphs with the year. Built with React, Three.js, GSAP, and Lenis.",
-    tech: [
-      "TypeScript",
-      "React",
-      "Three.js",
-      "GSAP",
-      "Framer Motion",
-      "Tailwind",
-    ],
+      "Immersive interactive site that travels through time — drag the timeline, scroll, or use the keys and the entire interface morphs with the year.",
+    tech: ["TypeScript", "React", "Three.js", "GSAP", "Framer Motion"],
     github: "https://github.com/Arya7n/time-travel",
     live: "https://time-travel-sage.vercel.app",
     featured: true,
@@ -122,16 +116,25 @@ export const projects = [
     title: "Portfolio OS",
     description:
       "Interactive portfolio that boots as a desktop OS — windowed apps for experience, projects, and skills, a working terminal, recruiter mode, and Three.js wallpaper scenes.",
-    tech: ["TypeScript", "React", "Three.js", "Zustand", "Framer Motion", "Vite"],
+    tech: ["TypeScript", "React", "Three.js", "Zustand", "Vite"],
     github: "https://github.com/Arya7n/portfolio-Os",
     live: "https://portfolioos-phi.vercel.app",
     featured: true,
   },
   {
+    title: "CMIYGL",
+    description:
+      "Make your own Call Me If You Get Lost passport ID — upload a photo, add your name, and download a high-res card.",
+    tech: ["TypeScript", "React", "Vite", "Tailwind"],
+    github: "https://github.com/Arya7n/CMIYGL",
+    live: "https://cmiygl-arya7n.vercel.app",
+    featured: false,
+  },
+  {
     title: "Cartify",
     description:
       "Full-stack e-commerce platform with JWT auth, Razorpay payments, admin dashboard, invoice generation, and role-based access.",
-    tech: ["MongoDB", "Express", "React", "Node.js", "JWT", "Razorpay", "Tailwind"],
+    tech: ["MongoDB", "Express", "React", "Node.js", "JWT", "Razorpay"],
     github: "https://github.com/Arya7n/cartify",
     live: "https://cartifymern.vercel.app/",
     featured: true,
@@ -139,11 +142,11 @@ export const projects = [
   {
     title: "One Piece",
     description:
-      "Three.js One Piece–inspired open world — play as Luffy and Zoro, explore islands, swim, smash barrels, and sail the Going Merry. Gear 5 stretch attacks, triple-slash VFX, collectibles, and a boardable pirate ship.",
+      "Three.js One Piece–inspired open world — play as Luffy and Zoro, explore islands, swim, smash barrels, and sail the Going Merry.",
     tech: ["Three.js", "JavaScript", "Vite"],
     github: "https://github.com/Arya7n/one-piece",
     live: "https://onepiece3js.vercel.app/",
-    featured: true,
+    featured: false,
   },
   {
     title: "Veloce",
@@ -152,7 +155,16 @@ export const projects = [
     tech: ["JavaScript", "React"],
     github: "https://github.com/Arya7n/veloce",
     live: "https://veloce-beta-cyan.vercel.app/",
-    featured: true,
+    featured: false,
+  },
+  {
+    title: "HRMS",
+    description:
+      "Human resource management dashboard for day-to-day HR workflows — built for clarity and operational speed.",
+    tech: ["React", "Node.js", "JavaScript"],
+    github: "https://github.com/Arya7n/HRMS",
+    live: "https://hrms-three-black.vercel.app",
+    featured: false,
   },
 ];
 
@@ -175,7 +187,15 @@ export const skills = [
   },
   {
     label: "Frontend",
-    items: ["React.js", "Next.js", "Redux", "Tailwind CSS", "Three.js", "HTML5", "CSS3"],
+    items: [
+      "React.js",
+      "Next.js",
+      "Redux",
+      "Tailwind CSS",
+      "Three.js",
+      "HTML5",
+      "CSS3",
+    ],
   },
   {
     label: "Databases & ORMs",
@@ -183,11 +203,19 @@ export const skills = [
   },
   {
     label: "Cloud & DevOps",
-    items: ["Docker", "Redis", "BullMQ", "AWS (S3, SES)", "PM2"],
+    items: ["Docker", "Redis", "BullMQ", "AWS (S3, SES)", "Neon", "Vercel", "PM2"],
   },
   {
     label: "Tools",
-    items: ["Git", "GitHub", "Postman", "Firebase", "Linux", "CLI", "Chrome Extensions"],
+    items: [
+      "Git",
+      "GitHub",
+      "Electron",
+      "Postman",
+      "Firebase",
+      "Linux",
+      "Chrome Extensions",
+    ],
   },
 ];
 
@@ -203,9 +231,9 @@ export const capabilities = [
       "MongoDB tuning, Redis caching, and BullMQ jobs — measurable gains on query speed and API response time.",
   },
   {
-    title: "Cloud & delivery",
+    title: "Product shipping",
     description:
-      "Dockerized apps, AWS S3/SES workflows, and shipping features end-to-end with React and Next.js when needed.",
+      "From company dashboards and desktop agents to Three.js experiences and Chrome extensions — building end-to-end and shipping live.",
   },
 ];
 

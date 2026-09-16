@@ -3,9 +3,11 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { education, profile } from "@/data/content";
 
-const Counter = ({ value, suffix = "", inView }) => {
+const Counter = ({ value, suffix = "", decimals = 0, inView }) => {
   const count = useMotionValue(0);
-  const rounded = useTransform(count, (v) => Math.round(v));
+  const rounded = useTransform(count, (v) =>
+    decimals > 0 ? v.toFixed(decimals) : Math.round(v)
+  );
 
   useEffect(() => {
     if (!inView) return;
@@ -25,9 +27,9 @@ const Counter = ({ value, suffix = "", inView }) => {
 };
 
 const stats = [
-  { value: 1, suffix: "+", label: "Year building products" },
-  { value: 40, suffix: "%", label: "Query performance gains" },
-  { value: 4, suffix: "+", label: "Live production apps" },
+  { value: 1.5, suffix: "+", label: "Years of experience", decimals: 1 },
+  { value: 10, suffix: "+", label: "Personal projects shipped", decimals: 0 },
+  { value: 4, suffix: "+", label: "Live production apps", decimals: 0 },
 ];
 
 const About = () => {
@@ -78,7 +80,12 @@ const About = () => {
                   className="rounded-2xl border border-ink/10 bg-paper-soft/70 p-4 md:p-5 backdrop-blur-sm transition-colors"
                 >
                   <p className="font-display text-3xl md:text-4xl tracking-tight text-ink mb-2">
-                    <Counter value={stat.value} suffix={stat.suffix} inView={inView} />
+                    <Counter
+                      value={stat.value}
+                      suffix={stat.suffix}
+                      decimals={stat.decimals}
+                      inView={inView}
+                    />
                   </p>
                   <p className="text-xs md:text-sm text-ink-muted leading-snug">
                     {stat.label}
@@ -117,13 +124,13 @@ const About = () => {
                 <p className="font-mono text-xs tracking-[0.16em] uppercase text-paper/50 mb-3">
                   Focus
                 </p>
-                <p className="font-medium tracking-tight mb-1">Backend systems & APIs</p>
+                <p className="font-medium tracking-tight mb-1">Full stack · shipping products</p>
                 <p className="text-paper/65 text-sm leading-relaxed">
                   Node.js · TypeScript · NestJS
                   <br />
-                  Microservices · WebSockets · Redis
+                  React · Next.js · Electron · Three.js
                   <br />
-                  Docker · AWS · PostgreSQL · MongoDB
+                  Docker · AWS · Neon · PostgreSQL
                 </p>
               </motion.div>
             </div>
