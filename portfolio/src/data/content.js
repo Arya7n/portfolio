@@ -69,6 +69,24 @@ export const projects = [
     featured: true,
   },
   {
+    title: "Cursor Tracker",
+    description:
+      "Company hub for Cursor usage — a local Node.js agent on each developer PC, and a Next.js dashboard on Postgres. No separate API service: the App Router handles enroll, heartbeat, and usage reports. The agent reads the signed-in Cursor Desktop session every ~20 minutes (Task Scheduler on Windows, Launch Agent on Mac) and never sends Cursor tokens to the hub. The dashboard shows team plans, cycle, %, Auto/API mix, trends, and devices; device tokens are stored as hashes only.",
+    tech: [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "SQLite",
+      "Docker",
+      "Tailwind",
+    ],
+    github: "https://github.com/Arya7n/cursor-tracker",
+    live: null,
+    featured: true,
+  },
+  {
     title: "JobMate",
     description:
       "Local-first Chrome extension that stores your professional profile and resumes on-device, autofills job applications with confidence-based field detection, and tracks every submission — no backend, account, or analytics.",
@@ -161,7 +179,7 @@ export const skills = [
   },
   {
     label: "Databases & ORMs",
-    items: ["MongoDB", "PostgreSQL", "Prisma", "Mongoose"],
+    items: ["MongoDB", "PostgreSQL", "SQLite", "Prisma", "Mongoose"],
   },
   {
     label: "Cloud & DevOps",
@@ -169,7 +187,7 @@ export const skills = [
   },
   {
     label: "Tools",
-    items: ["Git", "GitHub", "Postman", "Firebase", "Linux", "Chrome Extensions"],
+    items: ["Git", "GitHub", "Postman", "Firebase", "Linux", "CLI", "Chrome Extensions"],
   },
 ];
 
