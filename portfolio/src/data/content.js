@@ -71,19 +71,19 @@ export const projects = [
   {
     title: "Cursor Tracker",
     description:
-      "Company hub for Cursor usage — a local Node.js agent on each developer PC, and a Next.js dashboard on Postgres. No separate API service: the App Router handles enroll, heartbeat, and usage reports. The agent reads the signed-in Cursor Desktop session every ~20 minutes (Task Scheduler on Windows, Launch Agent on Mac) and never sends Cursor tokens to the hub. The dashboard shows team plans, cycle, %, Auto/API mix, trends, and devices; device tokens are stored as hashes only.",
+      "Company hub for Cursor usage — a desktop/CLI agent on each PC reads local Cursor data and reports only aggregates (plan, %, billing cycle) to a Next.js dashboard on Neon Postgres. Cursor login tokens never leave the machine. Admins see enrolled developers, sync status, and usage meters; installers ship via GitHub Releases (Windows .exe, Linux AppImage).",
     tech: [
       "TypeScript",
       "Next.js",
-      "React",
+      "Electron",
       "Node.js",
       "PostgreSQL",
-      "SQLite",
-      "Docker",
+      "Neon",
+      "Vercel",
       "Tailwind",
     ],
     github: "https://github.com/Arya7n/cursor-tracker",
-    live: null,
+    live: "https://cursor-tracker-nu.vercel.app",
     featured: true,
   },
   {
