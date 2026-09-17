@@ -11,6 +11,7 @@ export const profile = {
     github: "https://github.com/Arya7n",
     linkedin: "https://www.linkedin.com/in/aryan-46191b265",
     resume: "/resume.pdf",
+    portfolioOs: "https://aryan-portfolio-os.vercel.app/",
   },
 };
 
@@ -118,7 +119,7 @@ export const projects = [
       "Interactive portfolio that boots as a desktop OS — windowed apps for experience, projects, and skills, a working terminal, recruiter mode, and Three.js wallpaper scenes.",
     tech: ["TypeScript", "React", "Three.js", "Zustand", "Vite"],
     github: "https://github.com/Arya7n/portfolio-Os",
-    live: "https://portfolioos-phi.vercel.app",
+    live: "https://aryan-portfolio-os.vercel.app/",
     featured: true,
   },
   {

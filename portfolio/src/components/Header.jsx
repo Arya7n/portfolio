@@ -86,10 +86,20 @@ const Header = () => {
 
           <div className="flex items-center gap-2">
             <a
+              href={profile.links.portfolioOs}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-2 sm:px-3.5 text-sm font-medium tracking-tight text-paper bg-ink rounded-md hover:bg-ink-soft transition-colors"
+            >
+              <span className="sm:hidden">Try OS</span>
+              <span className="hidden sm:inline">Try Portfolio OS</span>
+              <ArrowUpRight size={14} />
+            </a>
+            <a
               href={profile.links.resume}
               download
               onClick={handleResumeDownloadClick}
-              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium tracking-tight text-ink border border-ink/15 rounded-md hover:border-ink/40 hover:bg-paper-soft/80 transition-colors"
+              className="hidden md:inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium tracking-tight text-ink border border-ink/15 rounded-md hover:border-ink/40 hover:bg-paper-soft/80 transition-colors"
             >
               Resume
               <ArrowUpRight size={14} />
@@ -128,6 +138,15 @@ const Header = () => {
                     {item.label}
                   </button>
                 ))}
+                <a
+                  href={profile.links.portfolioOs}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-left px-2 py-3 text-base tracking-tight text-ink font-medium"
+                >
+                  Try Portfolio OS
+                </a>
                 <a
                   href={profile.links.resume}
                   download
